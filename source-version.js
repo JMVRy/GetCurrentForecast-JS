@@ -1,5 +1,5 @@
 (async () => {
-	const response = await fetch("https://api.weather.gov/gridpoints/ILX/47,91/forecast");
+	const response = await fetch("https://api.weather.gov/gridpoints/LOT/73,73/forecast");
 	if (response.ok) {
 		const jsonValue = await response.json();
 		return Promise.resolve(jsonValue);
