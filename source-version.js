@@ -7,5 +7,12 @@
 		return Promise.reject("ERROR");
 	}
 })().then(
-	(data) => alert(data["properties"]["periods"][0]["detailedForecast"])
+	(data) => {
+		const currentForecast = data["properties"]["periods"][0];
+		if (currentForecast["detailedForecast"] == "" || currentForecast["detailedForecast"] == null) {
+			alert(currentForecast["shortForecast"] + " at " + currentForecast["temperature"] + "º" + currentForecast["temperatureUnit"] + ". " + currentForecast["windDirection"] + " winds at " + currentForecast["windSpeed"] ".");
+		} else {
+			alert(currentForecast["detailedForecast"]);
+		}
+	}
 ).catch(console.error)
