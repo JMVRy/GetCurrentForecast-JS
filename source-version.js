@@ -10,7 +10,7 @@
 	(data) => {
 		const currentForecast = data["properties"]["periods"][0];
 		if (currentForecast["detailedForecast"] == "" || currentForecast["detailedForecast"] == null) {
-			alert(currentForecast["shortForecast"] + " at " + currentForecast["temperature"] + "º" + currentForecast["temperatureUnit"] + ". " + currentForecast["windDirection"] + " winds at " + currentForecast["windSpeed"] ".");
+			alert(currentForecast["shortForecast"] + " at " + currentForecast["temperature"] + "º" + currentForecast["temperatureUnit"] + ". " + currentForecast["windDirection"] + " winds at " + currentForecast["windSpeed"] + ".");
 		} else {
 			alert(currentForecast["detailedForecast"]);
 		}
